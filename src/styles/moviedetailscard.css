@@ -1,0 +1,104 @@
+.details-cont {
+    font-family: 'Roboto', sans-serif;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .details-title {
+    font-size: 2rem;
+    color: #C80036;
+    margin: 0 0 1rem 0;
+    animation: fadeInDown 0.5s ease-out;
+  }
+  
+  .content-wrapper {
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .image-container {
+    flex: 1;
+    animation: fadeInLeft 0.5s ease-out;
+  }
+  
+  .details-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(200, 0, 54, 0.3);
+  }
+  
+  .info-container {
+    flex: 1;
+    animation: fadeInRight 0.5s ease-out;
+  }
+  
+  .details-overview {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+  
+  .additional-info {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: space-around;
+    text-align: center;
+    gap: 15px;
+  }
+  
+  .release, .rating, .budget, .revenue {
+    font-size: 0.85rem;
+    margin: 0;
+    padding: 0.8rem;
+    background-color: #2a2a2a;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+  }
+  
+  @keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  @keyframes fadeInLeft {
+    from { opacity: 0; transform: translateX(-20px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+  
+  @keyframes fadeInRight {
+    from { opacity: 0; transform: translateX(20px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+  
+  @media (max-width: 768px) {
+    .content-wrapper {
+      flex-direction: column;
+    }
+  
+    .details-title {
+      font-size: 1.5rem;
+    }
+  
+    .additional-info {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  .details-img:hover {
+    transform: scale(1.02);
+    transition: transform 0.3s ease;
+  }
+  
+  .release:hover, .rating:hover, .budget:hover, .revenue:hover {
+    background-color: #C80036;
+    color: #ffffff;
+    transform: translateY(-2px);
+  }
